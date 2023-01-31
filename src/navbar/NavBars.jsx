@@ -38,9 +38,15 @@ const NavBars = () => {
             <img loading='lazy' src={myImg} alt="Nawaz Danish" />
             <h4>Nawaz Danish</h4>
             <p>React Developer</p>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-square-github"></i>
-            <i class="fa-brands fa-square-twitter"></i>
+            <a href="https://www.linkedin.com/in/nawazdanish/" target="blank">
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/nawazdanish1996" target="blank">
+              <i className="fa-brands fa-square-github"></i>
+            </a>
+            <a href="https://twitter.com/nawazdanish1996" target="blank">
+              <i className="fa-brands fa-square-twitter"></i>
+            </a>
             <hr />
           </div>
 

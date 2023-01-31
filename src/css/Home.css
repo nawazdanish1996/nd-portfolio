@@ -1,0 +1,43 @@
+.home .col-md-12:nth-child(1) h2{
+    line-height: 30px;
+    font-size: 30px;
+}
+
+.home .col-md-12:nth-child(1) p{
+    color: yellow;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.home .col-md-12:nth-child(2){
+    display: inline-flex;
+    justify-content: center;
+}
+
+.home .col-md-12:nth-child(2) div{
+    border: none;
+}
+
+.home .col-md-12:nth-child(2) img{
+    width: 50px;
+    margin: 0 auto;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    margin: 1.5rem;
+}
+
+.home .col-md-12:nth-child(2) p{
+    font-size: 12px;
+    border: 1px solid white;
+    padding: 5px;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+    margin-top: -12px;
+    border-radius: 5px;
+    display: none;
+}
+
+.home .col-md-12:nth-child(2) img:hover ~ p{
+    display: block;
+    transition: all 1s ease;
+}
