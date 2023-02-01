@@ -58,6 +58,7 @@ const Project = () => {
               {myProj.map((val, ind)=>{
                 const {img, title, techStack, viewCode, visitWebsite} = val;
                 return(
+                  <div className="col-md-4">
                   <div className="project-container" key={ind}>
                     <div className="the-card">
                       <div className="card-front">
@@ -76,6 +77,7 @@ const Project = () => {
                             </a>
                         </div>
                       </div>
+                  </div>
                   </div>
                 )})}
 
