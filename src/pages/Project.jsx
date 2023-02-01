@@ -53,6 +53,7 @@ const Project = () => {
               <div className="col-md-12">
                 <h2>Projects</h2>
               </div>
+            
 
               {myProj.map((val, ind)=>{
                 const {img, title, techStack, viewCode, visitWebsite} = val;
