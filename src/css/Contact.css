@@ -1,24 +1,59 @@
 .social-media{
     border-radius: 5px;
-    width: 250px;
+    width: 230px;
     background-color: white;
+    margin: 0 10px 20px auto;
+    display: inline-table;
+    padding: .5rem;
+    user-select: none;
     cursor: pointer;
+    transition: all 1s ease;
 }
 
-.social-media a{
-    display: flex;
+.social-media:hover{
+    transform: scale(0.9);
 }
 
-.social-media a div:nth-child(1){
-    border: 1px solid red;
-    float: left;
+.social-media p{
+    font-size: 15px;
 }
 
-.social-media a div:nth-child(1) i{
+.social-media i{
     font-size: 50px;
+    float: left;
+    padding: .2rem;
 }
 
-.social-media a div:nth-child(2){
-    border: 1px solid green;
+.social-media div{
     float: right;
+    line-height: 1px;
+}
+
+/* form */
+form{
+    margin: 0 auto;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
+    border-radius: 5px;
+    padding: 10px 5px 10px 5px;
+}
+
+form div{
+    margin-bottom: 25px;
+}
+
+form input,
+form textarea{
+    width: 100%;
+    /* margin-top: 8px; */
+    resize: none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+form p{
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 1px;
+    color: red;
+    font-size: 14px;
 }
