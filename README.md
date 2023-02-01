@@ -4,6 +4,9 @@ This is my portfolio website with fully responsive UI.
 ## Tech Stack: 
 - React, Bootstrap, CSS
 
+# Hosted url:
+- https://nawazdanish1996.github.io/nd-portfolio
+
 ## Feedback
 If you have any feedback, please reach out to us at contact.to.nd@gmail.com
 ## Developed By:

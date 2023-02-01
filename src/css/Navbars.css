@@ -17,6 +17,7 @@
     background: #16222A;
     background: -webkit-linear-gradient(to right, #16222A, #3A6073);
     background: linear-gradient(to right, #16222A, #3A6073);
+    z-index: 999;
 }
 
 /* Toggle Button */
@@ -25,8 +26,8 @@
     font-size: 30px;
     padding: 2px;
     border-radius: 5px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     top: 1rem;
     left: 1rem;
     width: 40px;

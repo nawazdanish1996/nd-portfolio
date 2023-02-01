@@ -1,0 +1,24 @@
+.social-media{
+    border-radius: 5px;
+    width: 250px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.social-media a{
+    display: flex;
+}
+
+.social-media a div:nth-child(1){
+    border: 1px solid red;
+    float: left;
+}
+
+.social-media a div:nth-child(1) i{
+    font-size: 50px;
+}
+
+.social-media a div:nth-child(2){
+    border: 1px solid green;
+    float: right;
+}

@@ -5,15 +5,15 @@
   box-sizing: border-box;
 }
 
-.about,
-.contact,
 .home,
-.portfolio{
+.projects,
+.contact,
+.resume{
   width: 100%;
   height: 100%;
   min-height: 100vh;
   float: right;
-  padding: 5rem 3rem 3rem 3rem;
+  padding: 3rem 3rem 3rem 3rem;
   user-select: none;
   color: white;
   background: #0f0c29;

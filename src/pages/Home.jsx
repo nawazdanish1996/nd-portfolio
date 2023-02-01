@@ -13,6 +13,7 @@ import js from "../assests/images/techImg/js.png"
 import react from "../assests/images/techImg/react.png"
 import git from "../assests/images/techImg/git.png"
 import redux from "../assests/images/techImg/redux.png"
+import node from "../assests/images/techImg/node.png"
 
 const Home = () => {
   const stackImg = [
@@ -45,6 +46,10 @@ const Home = () => {
       imgSrc: redux
     },
     {
+      title: "Node.js",
+      imgSrc: node
+    },
+    {
       title: "Git",
       imgSrc: git
     }
@@ -69,16 +74,19 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="col-md-12">
-            {stackImg.map((val, ind)=>{
-                const {imgSrc, title} = val;
-                return(
-                  <div>
-                    <img loading='lazy' src={imgSrc} alt={title} />
-                    <p>{title}</p>
-                  </div>
-                )})}
+          <div className="col-md-12 mt-md-5 mb-md-5">
+            <p style={{color: "white"}}>I am a React Developer with hands-on experience in identifying web-based user interactions along with highly responsive user interface components by deploying react concepts and writing code via Javascript and React.js workflows. Monitoring and maintaining frontend performance.</p>
           </div>
+
+          <h4 style={{textAlign: "left"}}>Teach stack:</h4>
+          {stackImg.map((val, ind)=>{
+            const {imgSrc, title} = val;
+              return(
+              <div className="imgs">
+                <img loading='lazy' src={imgSrc} alt={title} />
+                <p>{title}</p>
+              </div>
+          )})}
 
         </div>
       </div>
