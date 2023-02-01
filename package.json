@@ -1,7 +1,7 @@
 {
   "name": "portfolio-webiste",
   "version": "0.1.0",
-  "homepage": "https://nawazdanish1996.github.io/nd-portfolio",
+  "homepage": "https://www.nawazdaish.online/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
