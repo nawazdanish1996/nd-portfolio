@@ -5,8 +5,7 @@ This is my portfolio website with fully responsive UI.
 - React, Bootstrap, CSS
 
 ## Hosted url:
-- https://nawazdanish1996.github.io/nd-portfolio
-
+- www.nawazdaish.online
 ## Code Url
 - https://github.com/nawazdanish1996/nd-portfolio
 
