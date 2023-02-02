@@ -3,14 +3,20 @@ import "../css/Navbars.css";
 import {NavLink} from "react-router-dom";
 import myImg from "../assests/images/Nawaz Danish.jpg";
 
+// sound
+import useSound from 'use-sound';
+import boopSfx from '../assests/audio/button_click_sound.mp3';
+
 
 const NavBars = () => {
+  const [play] = useSound(boopSfx);
   const [show, setShow] = useState("fa-bars");
   const [showNav, setShowNav] = useState("navbar");
   const [oth, setOth] = useState("hide");
-  const [showFot, setShowFot] = useState("hideFooter")
+  const [showFot, setShowFot] = useState("hideFooter");
 
   const showToggleHandler = () =>{
+      play();
       if(show === "fa-bars"){
           setShow("fa-x");
           setShowNav("navbar-hide");
@@ -20,8 +26,8 @@ const NavBars = () => {
           setShow("fa-bars");
           setShowNav("navbar");
           setOth("hide");
-          setShowFot("hideFooter")
-      }
+          setShowFot("hideFooter");
+        }
   };
 
   return (

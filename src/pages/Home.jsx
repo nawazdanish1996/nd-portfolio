@@ -74,7 +74,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="col-md-12 mt-md-5 mb-5">
+          <div className="col-md-12 mt-5 mb-5">
             <p style={{color: "white"}}>I am a React Developer with hands-on experience in identifying web-based user interactions along with highly responsive user interface components by deploying react concepts and writing code via Javascript and React.js workflows. Monitoring and maintaining frontend performance.</p>
           </div>
 

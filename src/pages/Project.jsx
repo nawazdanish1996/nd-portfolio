@@ -66,15 +66,17 @@ const Project = () => {
                       </div>
     
                       <div className="card-back">
-                        <h3>{title}</h3>
-                        <p>Tech Stack: {techStack}</p>
-                          <a href={viewCode} target='blank'>
-                            View Code <i class="fa-solid fa-eye"></i>
+                        <div className="card-back-second">
+                          <h3>{title}</h3>
+                            <p>Tech Stack: {techStack}</p>
+                            <a href={viewCode} target='blank'>
+                              View Code <i class="fa-solid fa-eye"></i>
                             </a>
                             <br />
                             <a href={visitWebsite} target='blank'>
                               Visit Website <i class="fa-solid fa-eye"></i>
                             </a>
+                          </div>
                         </div>
                       </div>
                   </div>
