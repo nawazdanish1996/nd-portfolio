@@ -34,7 +34,7 @@ const NavBars = () => {
             <i onClick={showToggleHandler} class={`fa-solid ${show} ticon`}></i>
           </div>
 
-          <div className={`${oth} mt-md-5`}>
+          <div className={`${oth} mt-5`}>
             <img loading='lazy' src={myImg} alt="Nawaz Danish" />
             <h4>Nawaz Danish</h4>
             <p>React Developer</p>

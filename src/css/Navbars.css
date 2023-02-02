@@ -118,6 +118,8 @@ nav ul li a:hover{
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
+    position: absolute;
+    top: 87%;
 }
 
 @media (max-width: 895px){
