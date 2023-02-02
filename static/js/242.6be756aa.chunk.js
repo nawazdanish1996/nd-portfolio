@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkportfolio_webiste=self.webpackChunkportfolio_webiste||[]).push([[242],{242:function(e,n,t){t.r(n),t.d(n,{default:function(){return i}});t(791);var o=t(184),i=function(){return(0,o.jsx)("div",{className:"nopage",children:"NoPage"})}}}]);
-//# sourceMappingURL=242.6be756aa.chunk.js.map
