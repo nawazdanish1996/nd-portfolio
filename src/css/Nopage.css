@@ -1,0 +1,29 @@
+.nopage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* text-align: center; */
+    /* background-color: #282c34; */
+    background-color: #011015;
+    position: relative;
+}
+.nopage a{
+    font-size: 20px;
+}
+
+@media (max-width: 360px){
+    .nopage h3{
+        font-size: 20px;
+    }
+}
+@media (max-width: 310px){
+    .nopage h3{
+        font-size: 15px;
+    }
+    .nopage a{
+        font-size: 16px;
+    }
+}
