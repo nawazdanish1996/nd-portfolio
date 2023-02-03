@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
 import "../css/Contact.css";
 
+// sound
+import useSound from 'use-sound';
+import boopSfx from '../assests/audio/success_sound.mp3';
+
 const Contact = () => {
+  const [play] = useSound(boopSfx);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mob, setMob] = useState("");
@@ -34,6 +39,7 @@ const Contact = () => {
       setErrName("");
       setErrEmail("");
       setErrMsg("");
+      return play();
     }
   }
 
@@ -47,7 +53,7 @@ const Contact = () => {
           <p>Visit me on social media, browse my repositories, or drop some words on my email</p>
         </div>
 
-      <div className="col-md-6">
+      <div className="col-md-6 mt-2">
         {sobj.map((val, ind)=>{
           const {icon, hrefLink, name} = val;
             return(
@@ -64,7 +70,7 @@ const Contact = () => {
         </div>
 
 
-        <div className="col-md-6">
+        <div className="col-md-6 mt-2">
           <form onSubmit={formSubmitHandler}>
             <div>
               <input onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder='Name'/>

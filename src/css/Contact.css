@@ -33,27 +33,38 @@
 form{
     margin: 0 auto;
     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
-    border-radius: 5px;
-    padding: 10px 5px 10px 5px;
+    border-radius: 20px;
+    padding: 30px 5px 30px 5px;
+    animation: formColor 5s linear infinite;
+}
+
+@keyframes formColor{
+    33.33%{
+        box-shadow: 0 0 15px rgb(173, 181, 27);
+    }
+    66.66%{
+        box-shadow: 0 0 15px rgb(19, 134, 187);
+    }
+    100%{
+        box-shadow: 0 0 15px rgb(20, 207, 92);
+    }
 }
 
 form div{
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 form input,
 form textarea{
-    width: 100%;
-    /* margin-top: 8px; */
+    width: 70%;
     resize: none;
     border-radius: 20px;
     text-align: center;
 }
 
 form p{
-    float: left;
-    margin-left: 20px;
     margin-bottom: 1px;
     color: red;
     font-size: 14px;
+    text-align: center;
 }

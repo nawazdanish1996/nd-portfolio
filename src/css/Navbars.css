@@ -113,13 +113,35 @@ nav ul li a:hover{
 
 .showFooter{
     display: block;
-    background: black;
+    background: #111111;
     color: white;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     position: absolute;
-    top: 87%;
+    top: 78%;
+}
+
+
+.showFooter p{
+    line-height: 7px;
+}
+
+.showFooter p:nth-child(1){
+    font-weight: bold;
+    animation: changeColor 5s linear infinite;
+}
+.showFooter p:nth-child(3) span{
+    color: yellowgreen;
+}
+
+@keyframes changeColor{
+    50%{
+        color: red;
+    }
+    100%{
+        color: yellow;
+    }
 }
 
 @media (max-width: 895px){

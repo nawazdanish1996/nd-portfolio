@@ -1,5 +1,6 @@
 import React from 'react';
 import "../css/Home.css";
+import Project from "./Project";
 import { 
   useTypewriter, 
   // Cursor 
@@ -82,11 +83,14 @@ const Home = () => {
           {stackImg.map((val, ind)=>{
             const {imgSrc, title} = val;
               return(
-              <div className="imgs">
+              <div className="imgs" key={ind}>
                 <img loading='lazy' src={imgSrc} alt={title} />
                 <p>{title}</p>
               </div>
           )})}
+
+          <Project />
+
 
         </div>
       </div>

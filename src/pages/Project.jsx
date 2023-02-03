@@ -6,7 +6,12 @@ import img3 from "../assests/images/projImages/3.png"
 import img4 from "../assests/images/projImages/4.png"
 import img5 from "../assests/images/projImages/5.png"
 
+// use Sound
+import useSound from 'use-sound';
+import boopSfx from '../assests/audio/on_cardOpen.mp3';
+
 const Project = () => {
+  const [play, {stop}] = useSound(boopSfx);
   const myProj = [
     {
       img: img1,
@@ -59,7 +64,7 @@ const Project = () => {
                 const {img, title, techStack, viewCode, visitWebsite} = val;
                 return(
                   <div className="col-md-4">
-                  <div className="project-container" key={ind}>
+                  <div className="project-container" onMouseEnter={()=>play()} onMouseLeave={()=>stop()} key={ind}>
                     <div className="the-card">
                       <div className="card-front">
                         <img src={img} alt={title} />

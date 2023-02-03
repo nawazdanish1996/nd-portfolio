@@ -68,9 +68,12 @@ const NavBars = () => {
           </div>
 
           <div className={`${showFot}`}>
+            <div>
+              <p>v1.0 - Updated on 23/02/2023</p>
+              <p>Designed from scratch by me!</p>
+              <p>Using: <span>React, Bootstrap, CSS</span></p>
+            </div>
             <footer>
-              <small>All Rights Reserved</small>
-              <br />
               <small>Developed By: Nawaz Danish</small>
             </footer>
           </div>
