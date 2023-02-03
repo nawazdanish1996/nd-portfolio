@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio_webiste=self.webpackChunkportfolio_webiste||[]).push([[242],{8242:function(e,s,i){i.r(s),i.d(s,{default:function(){return o}});i(2791);var n=i(1087),c=i(184),o=function(){return(0,c.jsx)("div",{className:"nopage",children:(0,c.jsx)("div",{className:"container",children:(0,c.jsx)("div",{className:"row",children:(0,c.jsxs)("div",{className:"col-md-12",children:[(0,c.jsx)("h3",{children:" 404 | This Pages Doesn't Exists"}),(0,c.jsx)(n.OL,{to:"/",children:"Go to homepage"})]})})})})}}}]);
+//# sourceMappingURL=242.93d80a54.chunk.js.map
