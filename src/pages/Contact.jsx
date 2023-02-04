@@ -41,7 +41,7 @@ const Contact = () => {
       setErrMsg("");
       return play();
     }
-  }
+  };
 
   return (
     <div className='contact'>
@@ -94,6 +94,7 @@ const Contact = () => {
 
         </div>
       </div>
+
     </div>
   )
 }

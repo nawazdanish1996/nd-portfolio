@@ -1,0 +1,8 @@
+.internship{
+    text-align: left;
+}
+
+.internship .col-md-12:nth-child(4){
+    background-color: #3c6382;
+    padding: 1rem;
+}
