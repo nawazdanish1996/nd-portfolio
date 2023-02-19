@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import "../css/Contact.css";
+import emailjs from "@emailjs/browser";
+import swal from 'sweetalert';
 
 // sound
 import useSound from 'use-sound';
 import boopSfx from '../assests/audio/success_sound.mp3';
 
 const Contact = () => {
-  const [play] = useSound(boopSfx);
+  const [plays] = useSound(boopSfx);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mob, setMob] = useState("");
@@ -16,20 +18,26 @@ const Contact = () => {
   const [errMob, setErrMob] = useState("");
   const [errEmail, setErrEmail] = useState("");
   const [errMsg, setErrMsg] = useState("");
+  const form = useRef();
 
   const formSubmitHandler = (e) =>{
     e.preventDefault();
     const emailPattern = /^[A-Za-z0-9._]{3,}@[a-zA-Z]{3,}[.]{1,}[a-zA-Z.]{2,6}$/g;
 
     if(name === "" || name.length < 5){
-      setErrName("Invalid Name**")
+      swal("Oops!", "Wrong Name Input", "error");
+      setErrName("Invalid Name**");
     }else if(isNaN(mob) || mob.length < 10 || mob.length > 10){
-      setErrMob("Invalid Mobile Number**")
+      swal("Oops!", "Mobile Number must be 10 digit", "error");
+      setErrMob("Invalid Mobile Number**");
     }else if(!emailPattern.test(email)){
-      setErrEmail("Invalid Email**")
+      swal("Oops!", "Invalid email address", "error");
+      setErrEmail("Invalid Email**");
     }else if(msg.length < 25){
+      swal("Oops!", "Message should be greater than twenty five words.", "error");
       setErrMsg("Message should be greater than twenty five characters **");
     }else{
+      swal("Sent", "I will get back to you as soon as possible", "success"); 
       setMob("");
       setName("");
       setEmail("");
@@ -39,7 +47,17 @@ const Contact = () => {
       setErrName("");
       setErrEmail("");
       setErrMsg("");
-      return play();
+      plays();
+      emailjs.sendForm(
+        "service_9qrl41l",
+        "template_nbaucaa",
+        form.current,
+        "qjRsQvu1S5q4aYrqk"
+      ).then((result)=>{
+        console.log(result.text)
+      },(err)=>{
+        console.log(err.text)
+      })
     }
   };
 
@@ -73,19 +91,19 @@ const Contact = () => {
         <div className="col-md-6 mt-2">
           <form onSubmit={formSubmitHandler}>
             <div>
-              <input onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder='Name'/>
+              <input name="name" onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder='Name'/>
               <p>{errName}</p>
             </div>
             <div>
-              <input onChange={(e) => setMob(e.target.value)} value={mob} type="text" placeholder='Mobile Number'/>
+              <input name="mobno" onChange={(e) => setMob(e.target.value)} value={mob} type="text" placeholder='Mobile Number'/>
               <p>{errMob}</p>
             </div>
             <div>
-              <input onChange={(e) => setEmail(e.target.value)} value={email} type="text" placeholder='Email Address'/>
+              <input name="emails" onChange={(e) => setEmail(e.target.value)} value={email} type="text" placeholder='Email Address'/>
               <p>{errEmail}</p>
             </div>
             <div>
-              <textarea onChange={(e) => setMsg(e.target.value)} value={msg} name="message" placeholder='Message...' id="" cols="30" rows="5"></textarea>
+              <textarea name="message" onChange={(e) => setMsg(e.target.value)} value={msg} placeholder='Message...' id="" cols="30" rows="5"></textarea>
               <p>{errMsg}</p>
             </div>
             <button className='btn btn-warning fw-bold' type='submit'>Send</button>

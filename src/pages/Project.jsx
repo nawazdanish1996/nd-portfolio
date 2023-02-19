@@ -29,7 +29,7 @@ const Project = () => {
     },
     {
       img: img3,
-      title: "Alarm Clock",
+      title: "University Website",
       techStack: "HTML, CSS, JS",
       viewCode: "https://github.com/nawazdanish1996/Alarm-Clock-with-Sound",
       visitWebsite: "https://nawazdanish1996.github.io/Alarm-Clock-with-Sound/"

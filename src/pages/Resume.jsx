@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import "../css/Resume.css";
-import MyResume from "../assests/doc/Nawaz Danish-Resume.pdf";
-
 import {Document, Page} from "react-pdf/dist/esm/entry.webpack";
+import MyResume from "../assests/doc/Nawaz Danish-Resume.pdf";
 
 
 const Resume = () => {
