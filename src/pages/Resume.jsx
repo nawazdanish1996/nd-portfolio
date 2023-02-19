@@ -10,19 +10,15 @@ const Resume = () => {
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
-    setPageNumber(1);
+    // setPageNumber(1);
   }
 
-  function changePage(offSet){
-    setPageNumber(prePage => prePage + offSet)
+  const prevPage = () =>{
+    setPageNumber(pageNumber - 1 <= 1 ? 1 : pageNumber - 1);
   }
 
-  function changePageBack(){
-    changePage(-1);
-  }
-
-  function changePageNext(){
-    changePage(+1);
+  const nextPage = () =>{
+    setPageNumber( pageNumber + 1 >= numPages ? pageNumber : pageNumber + 1);
   }
 
   return (
@@ -37,18 +33,14 @@ const Resume = () => {
           </div>
 
           <div className="col-md-12">
-            {pageNumber > 1 &&
-                <button className='btn btn-primary btn-sm' onClick={changePageBack}>Previous Page</button>
-              }
-            {
-              pageNumber < numPages &&
-              <button className='btn btn-primary btn-sm' onClick={changePageNext}>Next Page</button>
-            }
-            <br />
-            <br />
-            <p className='mb-3'>Page {pageNumber} of {numPages}</p>
-            <Document id="page" file={MyResume} onLoadSuccess={onDocumentLoadSuccess}>
-              <Page pageNumber={pageNumber} />
+            {/* {pageNumber > 1 &&} */}
+            <button onClick={prevPage} className='btn btn-danger btn-sm'>Previous Page</button>
+            <div className="btn text-white ">{`Page ${pageNumber} of ${numPages}`}</div>
+            {/* {pageNumber < numPages &&} */}
+            <button onClick={nextPage} className='btn btn-warning btn-sm'>Next Page</button>
+            <br /><br />
+            <Document file={MyResume} onLoadSuccess={onDocumentLoadSuccess}>
+              <Page pageNumber={pageNumber}></Page>
             </Document>
           </div>
 
