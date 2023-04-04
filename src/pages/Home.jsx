@@ -70,7 +70,7 @@ const Home = () => {
             <h2>Hello World!</h2>
             <h2>I am Nawaz Danish</h2>
             <p>
-              Fresher - {text}
+              {text}
               {/* <Cursor cursorColor='red' /> */}
             </p>
           </div>
